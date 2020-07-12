@@ -39,7 +39,7 @@
                     tools:ignore="RtlSymmetry">
 
                     <TextView
-                        android:id="@+id/name"
+                        android:id="@+id/store_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="테스트입니다."

@@ -1,6 +1,9 @@
 package com.example.link_plus;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,5 +33,17 @@ public class ListViewActivity extends AppCompatActivity {
         adapter.addItem("케이투발전기(주)","042-673-9400","08:00~18:30","주차 가능 여부 : O", getResources().getDrawable(R.mipmap.ic_launcher));
 
         adapter.notifyDataSetChanged(); //어댑터의 변경을 알림
+
+        //listview.setOnItemClickListener(listener);
     }
+
+    /*AdapterView.OnItemClickListener listener = new AdapterView.OnItemClickListener() {
+        //클릭된 아이템을 보여주고 있는 AdapterView 객체, 뷰, 위치(첫번째 아이템(가장위쪽)부터 1,2,3), 아이디(특별한 설정이 없으면 position과 같은 값
+        @Override
+        public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+
+            Intent intent = new Intent(ListViewActivity.this, StoreInfoActivitiy.class);
+            intent.putExtra("store_name", adapter.getItem(position).);
+        }
+    };*/
 }

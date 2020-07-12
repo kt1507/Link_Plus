@@ -10,8 +10,8 @@ public class ListViewItem {
     private String timeStr;
     private String parkingStr;
 
-    public void setName(String name){
-        nameStr = name;
+    public void setStoreName(String store_name){
+        nameStr = store_name;
     }
     public void setPhone(String phone){
         phoneStr = phone;
@@ -29,7 +29,7 @@ public class ListViewItem {
     public Drawable getIcon(){
         return this.iconDrawable;
     }
-    public String getName(){
+    public String getStoreName(){
         return this.nameStr;
     }
     public String getPhone() { return this.phoneStr; }

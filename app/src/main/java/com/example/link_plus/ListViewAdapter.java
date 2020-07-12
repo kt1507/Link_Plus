@@ -2,6 +2,8 @@ package com.example.link_plus;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -10,15 +12,17 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
 public class ListViewAdapter extends BaseAdapter {
 
     private ImageView iconImageView;
-    private TextView nameTextView;
+    private TextView store_nameTextView;
     private TextView phoneTextView;
     private TextView timeTextView;
     private TextView parkingTextView;
@@ -51,7 +55,7 @@ public class ListViewAdapter extends BaseAdapter {
         }
 
         //화면에 표시될 View(Layout이 inflate된)으로부터 위젯에 대한 참조 획득
-        nameTextView = (TextView) convertView.findViewById(R.id.name);
+        store_nameTextView = (TextView) convertView.findViewById(R.id.store_name);
         phoneTextView = (TextView) convertView.findViewById(R.id.phone);
         timeTextView = (TextView) convertView.findViewById(R.id.time);
         parkingTextView = (TextView) convertView.findViewById(R.id.parking);
@@ -60,11 +64,25 @@ public class ListViewAdapter extends BaseAdapter {
         final ListViewItem listViewItem = listViewItemList.get(position);
 
         // 아이템 내 각 위젯에 데이터 반영
-        nameTextView.setText(listViewItem.getName());
+        store_nameTextView.setText(listViewItem.getStoreName());
         phoneTextView.setText(listViewItem.getPhone());
         timeTextView.setText(listViewItem.getTime());
         parkingTextView.setText(listViewItem.getParking());
         iconImageView.setImageDrawable(listViewItem.getIcon());
+
+        LinearLayout listview = (LinearLayout)convertView.findViewById(R.id.shapeLayout);
+        listview.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                Intent intent = new Intent(view.getContext(), StoreInfoActivitiy.class);
+                intent.putExtra("store_name", listViewItemList.get(pos).getStoreName());
+                intent.putExtra("phone",listViewItemList.get(pos).getPhone());
+                intent.putExtra("time",listViewItemList.get(pos).getTime());
+                intent.putExtra("parking",listViewItemList.get(pos).getParking());
+                intent.putExtra("image",iconImageView.getId());
+
+                context.startActivity(intent);
+            }
+        });
 
 
         return convertView;
@@ -82,10 +100,10 @@ public class ListViewAdapter extends BaseAdapter {
         return position;
     }
 
-    public void addItem(String name, String phone, String time, String parking, Drawable icon){
+    public void addItem(String store_name, String phone, String time, String parking, Drawable icon){
         ListViewItem item = new ListViewItem();
 
-        item.setName(name);
+        item.setStoreName(store_name);
         item.setPhone(phone);
         item.setTime(time);
         item.setParking(parking);
