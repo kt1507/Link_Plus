@@ -55,7 +55,7 @@ public class ListViewAdapter extends BaseAdapter {
         phoneTextView = (TextView) convertView.findViewById(R.id.phone);
         timeTextView = (TextView) convertView.findViewById(R.id.time);
         parkingTextView = (TextView) convertView.findViewById(R.id.parking);
-        iconImageView = (ImageView) convertView.findViewById(R.id.icon);
+        iconImageView = (ImageView) convertView.findViewById(R.id.image);
 
         final ListViewItem listViewItem = listViewItemList.get(position);
 
