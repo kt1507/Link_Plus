@@ -26,8 +26,6 @@ public class ListViewAdapter extends BaseAdapter {
     private TextView phoneTextView;
     private TextView timeTextView;
     private TextView parkingTextView;
-    private Switch switchView;
-    public String[] Check_Appname = new String[100];
 
     //Adapter에 추가된 데이터를 저장하기 위한 ArrayList
     private ArrayList<ListViewItem> listViewItemList = new ArrayList<ListViewItem>();

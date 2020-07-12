@@ -24,8 +24,11 @@
             android:id="@+id/shapeLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:paddingLeft="10dp">
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp">
+
             <ImageView
                 android:id="@+id/image"
                 android:layout_width="150dp"
@@ -74,15 +77,15 @@
         </LinearLayout>
 
         <ListView
-            android:id="@+id/listview"
+            android:id="@+id/product_listview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingTop="20dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp"></ListView>
+            tools:layout_editor_absoluteY="0dp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

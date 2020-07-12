@@ -25,6 +25,7 @@ public class ListViewActivity extends AppCompatActivity {
         listview = (ListView) findViewById(R.id.listview);
         listview.setAdapter(adapter);
 
+        //adapter를 통해 자료 추가
         adapter.addItem("야무진", "042-638-0689~90", "8:30~17:30", "주차 가능 여부 : X", getResources().getDrawable(R.mipmap.ic_launcher));
         adapter.addItem("대남기공사","042-626-4880","07:00~18:00","주차 가능 여부 : O", getResources().getDrawable(R.mipmap.ic_launcher));
         adapter.addItem("세종종합상사","042-635-6040","07:00~19:00","주차 가능 여부 : O", getResources().getDrawable(R.mipmap.ic_launcher));
@@ -34,16 +35,5 @@ public class ListViewActivity extends AppCompatActivity {
 
         adapter.notifyDataSetChanged(); //어댑터의 변경을 알림
 
-        //listview.setOnItemClickListener(listener);
     }
-
-    /*AdapterView.OnItemClickListener listener = new AdapterView.OnItemClickListener() {
-        //클릭된 아이템을 보여주고 있는 AdapterView 객체, 뷰, 위치(첫번째 아이템(가장위쪽)부터 1,2,3), 아이디(특별한 설정이 없으면 position과 같은 값
-        @Override
-        public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-
-            Intent intent = new Intent(ListViewActivity.this, StoreInfoActivitiy.class);
-            intent.putExtra("store_name", adapter.getItem(position).);
-        }
-    };*/
 }
