@@ -6,7 +6,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class LoginActivity extends MainActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class LoginActivity extends AppCompatActivity {
 
     private Button join;
     private Button login;
@@ -17,7 +19,7 @@ public class LoginActivity extends MainActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        getSupportActionBar().hide();
+        // getSupportActionBar().hide();
 
         join = (Button) findViewById(R.id.main_join_btn);
         login = (Button) findViewById(R.id.main_login_btn);

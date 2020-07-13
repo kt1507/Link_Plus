@@ -9,4 +9,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+
+    <string name="action_login">로그인 창</string>
+    <string name="action_listview">리스트뷰</string>
 </resources>
