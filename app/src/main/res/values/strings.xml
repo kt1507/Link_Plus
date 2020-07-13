@@ -6,9 +6,12 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_nav1">카테고리 1</string>
+    <string name="menu_nav2">카테고리 2</string>
+    <string name="menu_nav3">카테고리 3</string>
+    <string name="menu_nav4">카테고리 4</string>
+    <string name="menu_nav5">카테고리 5</string>
+    <string name="menu_nav6">카테고리 6</string>
 
     <string name="action_login">로그인 창</string>
     <string name="action_listview">리스트뷰</string>
