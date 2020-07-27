@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group
+        android:id="@+id/menu01"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/nav1"
             android:icon="@drawable/ic_menu_camera"
@@ -33,14 +35,40 @@
             <menu>
                 <item
                     android:id = "@+id/menu_login"
-                    android:title="로그인"
-                    />
+                    android:title="로그인"/>
                 <item
                     android:id = "@+id/menu_setting"
-                    android:title="설정"
-                    />
+                    android:title="설정"/>
             </menu>
         </item>
+            android:id="@+id/nav_home"
+            android:title="모두 표시" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/topnie"
+            android:title="시공/설계" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/bosu"
+            android:title="유지/보수" />
+        <item
+            android:id="@+id/gonggu"
+            android:icon="@drawable/spanner"
+            android:title="공구" />
+        <item
+            android:id="@+id/jungu"
+            android:icon="@drawable/lightbulb"
+            android:title="전기/전자" />
+        <item
+            android:id="@+id/car"
+            android:icon="@drawable/car"
+            android:title="자동차" />
+        <item
+            android:id="@+id/mungu"
+            android:icon="@drawable/pencil"
+            android:title="문구" />
 
     </group>
+
+
 </menu>
