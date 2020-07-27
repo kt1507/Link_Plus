@@ -39,6 +39,25 @@ public class MainActivity extends AppCompatActivity {
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+        /* 일단 보류, 햄버거에 임시로 지정 (전환되는것 확인 후 진행)
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch(item.getItemId()){
+                    case R.id.menu_login:
+                        Toast.makeText(MainActivity.this,"login",Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.menu_setting:
+                        Toast.makeText(MainActivity.this,"Setting",Toast.LENGTH_SHORT).show();
+                        break;
+                }
+
+                return false;
+            }
+
+        });*/
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
@@ -64,6 +83,9 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.action_listview:
                 startActivity(new Intent(MainActivity.this, ListViewActivity.class));
+                return true;
+            case R.id.action_login:
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
                 return true;
         }
         return super.onOptionsItemSelected(item);
