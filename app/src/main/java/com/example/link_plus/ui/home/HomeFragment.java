@@ -35,6 +35,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
         super.onCreate(savedInstanceState);
     }
 
+    //맵 자바 코드
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -46,6 +47,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
         return layout;
     }
 
+    //밑에 함수들은 기본 정의 함수들이니 수정 안하는 걸로~
     @Override
     public void onStart() {
         super.onStart();
@@ -105,12 +107,15 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
 
         //기본위치지정(나중에현재위치로변경!)
         LatLng ojung = new LatLng(36.348518, 127.415516);
+        //맵에 마킹할때 제목과 설명 표시
         googleMap.addMarker(new MarkerOptions().position(ojung).title("오정동").snippet("현재위치"));
+        //기본위치로 카메라 중심 이동
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(ojung));
+        //줌(지도 확대 배율인데 17이 가장 적당한 듯 심심하면 바꿔서 실행해봐영
         googleMap.animateCamera(CameraUpdateFactory.zoomTo(17));
 
         //하드코딩하세영!
-
+        //소수점 6자리 매핑하고 나머지는 양식그대로 복붙하면 됨
         LatLng car1 = new LatLng(36.348976, 127.415158);
         googleMap.addMarker(new MarkerOptions()
                 .position(car1)

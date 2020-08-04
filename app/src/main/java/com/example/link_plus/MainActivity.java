@@ -6,11 +6,14 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
+import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -38,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        /* 일단 보류, 햄버거에 임시로 지정 (전환되는것 확인 후 진행)
+        final NavigationView navigationView = findViewById(R.id.nav_view);
+        /*일단 보류, 햄버거에 임시로 지정 (전환되는것 확인 후 진행)
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -56,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
 
                 return false;
             }
-
         });*/
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
